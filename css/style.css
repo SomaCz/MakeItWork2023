@@ -1,0 +1,294 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6em;
+    background-color: #f4f4f4;
+}
+body a{
+    text-decoration: none;
+}
+
+/* Global */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.darkHighlight{
+    font-weight: bold;
+    color: #bcd7e9;
+}
+.focus{
+    font-weight: bold;
+}
+
+/* Header */
+header{
+    background-color: #2e4e7c;
+    color: #f4f8fd;
+    padding: 5px 0px 15px 0px;
+    min-height: 70px;
+}
+header .banner{
+    float: left;
+    padding-top: 10px;
+}
+header .banner h1{
+    margin: 0 05px;
+}
+header .banner p{
+    margin: 0 5px;
+    padding: 10px 5px;
+    color: #6a92ca;
+}
+header a{
+    text-decoration: none;
+    color: #f4f8fd;
+}
+header a:hover{
+    color:#598dd4;
+    font-weight: bold;
+}
+header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header li{
+    display: inline;
+    padding: 10px 5px 5px 5px;
+}
+header nav{
+    float:right;
+    margin-top: 10px;
+}
+/* Showcase */
+#showcase{
+    display: flex;
+    min-height: 450px;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#showcase::before{
+    content: "";
+    background-image: url(../img/Accessibility_01.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+#showcase h1{
+    text-transform: capitalize;
+    position: relative;
+    font-size: 55px;
+    line-height: 1.6em;
+    color: #2e4e7c;
+    text-shadow: 1px 1px 4px;
+}
+#showcase p{
+    text-shadow: 1px 1px 7px rgb(141, 141, 141) ;
+    position: relative;
+    font-size: 20px;
+    line-height: 1.4em;
+    color: #598dd4;
+}
+/* Img Display */
+.imgDisplay img{
+    min-width: 400px;
+    max-width: 1920px;
+    width: 75%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+/* Img */
+.imgContainerAbout .imgInfo{
+    order: 1;
+}
+.imgContainerAbout .imgDisplay{
+    order: 2;
+}
+.imgContainerFunctions{
+    margin: 25px 0 30px 0;
+    padding: 5px;
+}
+.imgInfo{
+    margin: 0 10px 0 10px;
+    padding: 5px;
+}
+.imgInfo ul{
+    list-style-type: square;
+    padding-top: 10px;
+}
+.imgInfo ol{
+    padding: 0;
+    list-style: none;
+}
+.imgInfo ol > li{
+    padding-top: 10px;
+}
+/* Infographic */
+.infographic{
+    background-color: #2e4e7c;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 40px 0;
+}
+.infographic a{
+    color: #00bae9;
+}
+.infographic a:hover{
+    color: #598dd4;
+    font-weight: bold;
+}
+/* Info */
+
+.info{
+    flex: 1;
+    padding: 5px 20px;
+    background-color: #19365f;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    min-width: 35%;   
+}
+.info h1{
+    padding: 5px;
+}
+.info p{
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+.info p+p{
+    text-indent: 10%;
+}
+
+/* Problem Section */
+#problemSection{
+    background-color: #f4f8fd;
+}
+#problemSection h1{
+    text-align: center;
+    color: #3d77c9;
+    margin: 15;
+}
+.infoProblemImg{
+    flex: 1;
+    padding: 10px;
+}
+.infoProblemImg p{
+    text-align: center;
+    padding: 0;
+    margin: 2px 0 5px 0;
+    font-size: 14px;
+}
+
+.infoProblemImg img{
+    min-width: 600px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* !!Decrepitated!! */
+/* .infoProblem{
+    background-color:inherit;
+    color: #f4f8fd;
+    padding: 15px;
+} */
+
+/* Border */
+.border
+{
+    height: 4px;
+    background-color: #f4f8fd;
+}
+
+/* !!Decrepitated!! */
+/* Background Color */
+/* .backgroundColor{
+    background-color: #2e4e7c;
+} */
+/* Footer */
+footer{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3a91ca;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+/* Media Queries */
+@media(max-width:768px){
+    header .banner,nav,nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #showcase h1{
+        margin-top: 15px;
+    }
+    .imgDisplay img{
+        min-width: 300px;
+    }
+    .info h1, .imgInfo h1{
+        text-align: center;
+    }
+    .info, .imgContainerFunctions, .imgContainerAbout{
+        margin-top: 15px;
+        padding-top: 25px;
+    }
+    .info{
+        margin-top: 50px;
+    }
+    .border
+    {
+        height: 7px;
+        background-color: #f4f8fd;
+    }
+    .infoProblemImg img{
+        min-width: 250px;
+    }
+    .infographic{
+        padding-top: 5px;
+    }
+    #problemSection h1{
+        line-height: 1.6em;
+    }
+}
+@media(min-width:768px){
+    .infoContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    .imgContainerAbout, .imgContainerFunctions{
+        display: flex;
+        justify-content: space-between;
+    }
+    .problemContainer{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+    }
+}
